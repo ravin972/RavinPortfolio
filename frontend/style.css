@@ -236,31 +236,56 @@ span a i {
   }
 }
 
+/* PAGE 2 SKILLS*/
+
 /* Common styles */
 .skills {
   text-align: center;
   padding: 20px;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
 }
 
 .skills p {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
 }
 
 .logos ul {
+  margin-top: 30px;
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .logos li img {
-  width: 80px;
+  width: 50px;
   height: auto;
   transition: transform 0.2s ease-in-out;
+  object-fit: contain;
+}
+
+#java {
+  width: 36px;
+  object-fit: contain;
+}
+
+.logos li .mongo {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.logos li .node {
+  width: 100px;
+}
+
+#typescript {
+  width: 60px;
 }
 
 .logos li img:hover {
@@ -279,5 +304,5 @@ span a i {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
+  background-color: #f1eef5;
 }
