@@ -37,12 +37,6 @@ body::-webkit-scrollbar-track {
   position: relative;
   overflow: hidden;
 }
-#page {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
 
 #iframe-container {
   position: absolute;
@@ -64,6 +58,7 @@ iframe {
   height: 100vh;
   width: 100vw;
   background-color: #ffffff;
+  overflow: hidden;
 }
 #page > img {
   display: block;
@@ -102,6 +97,11 @@ iframe {
   border-radius: 50%; /* Create a circular shape */
 }
 
+.logo {
+  max-width: 100px; /* Set the maximum width for the logo */
+  height: auto;
+}
+
 #nav {
   display: flex;
   justify-content: space-between;
@@ -109,11 +109,6 @@ iframe {
   padding: 1px; /* Add padding for spacing */
   position: relative;
   z-index: 2;
-}
-
-.logo {
-  max-width: 100px; /* Set the maximum width for the logo */
-  height: auto;
 }
 
 #center-nav {
@@ -134,37 +129,6 @@ iframe {
 
 #center-nav a:hover {
   color: rgb(118, 44, 187); /* Set the desired hover color */
-}
-
-#menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-  display: none; /* Hide the menu icon by default */
-}
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  #center-nav {
-    display: none; /* Hide navigation links on small screens */
-  }
-
-  #menu-icon {
-    display: block; /* Display the menu icon on small screens */
-  }
-
-  #menu-icon.active {
-    display: block;
-  }
-
-  /* Show the navigation links when menu icon is active */
-  #nav.active #center-nav {
-    display: block;
-  }
-
-  /* Hide the logo when menu icon is active */
-  #nav.active .logo {
-    display: none;
-  }
 }
 
 #text {
@@ -194,6 +158,7 @@ iframe {
   position: absolute;
   left: 2%;
 }
+
 /* Style for the parent span */
 span {
   display: inline-block;
@@ -219,21 +184,6 @@ span a:hover {
 span a i {
   font-size: 28px; /* Set the desired icon size */
   margin-right: 10px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  span {
-    margin-bottom: 10px; /* Adjust spacing for smaller screens */
-  }
-
-  span a {
-    margin-bottom: 5px; /* Adjust spacing between icons for smaller screens */
-  }
-
-  span a i {
-    font-size: 20px; /* Adjust icon size for smaller screens */
-  }
 }
 
 /* PAGE 2 SKILLS*/
@@ -292,17 +242,148 @@ span a i {
   transform: scale(1.1);
 }
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  .logos li img {
-    width: 60px;
-  }
-}
+/* ------------------------------------ */
 
 /* PAGE @2 */
 #page1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #f1eef5;
+  background-color: #ffffff;
+}
+.about-content {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+/* Style for the coder emoji */
+#emoji {
+  position: absolute;
+  top: 78%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  width: 100px;
+  height: 100px;
+  z-index: 2; /* Set a higher z-index */
+}
+
+/* Style for the background image */
+#bg {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: 13%;
+  margin-top: 7%;
+  border-radius: 2rem;
+  z-index: 1; /* Set a lower z-index */
+}
+
+/* Style for the optional third image inside the span */
+.img-side span {
+  position: absolute;
+  bottom: 35px;
+  right: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; /* Set a lowest z-index */
+}
+
+/* Style for the optional third image */
+.img-side span img {
+  width: 190px;
+}
+
+.text-side {
+  padding-right: 1.5rem;
+}
+.text-side h3 {
+  color: #147efb;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  #page > img {
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+
+  iframe {
+    display: none;
+    background-color: aliceblue;
+  }
+
+  .logo {
+    max-width: 70px;
+  }
+
+  #center-nav a {
+    display: none;
+  }
+
+  #text {
+    text-align: center;
+    margin: 50% -12%;
+    width: 100%;
+  }
+
+  #text h1 {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+
+  #text h4 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  #text h5 {
+    font-size: 10px;
+    margin: 22px;
+    color: rgb(62, 91, 255);
+    transform: rotate(-42deg);
+    position: absolute;
+    left: 2%;
+  }
+
+  #text span {
+    text-align: center;
+    width: 100%;
+    color: rgb(62, 91, 255);
+  }
+
+  /* ---------------------------------------- */
+
+  .logos li img {
+    width: 60px;
+  }
+
+  #emoji,
+  .img-side span img {
+    display: none; /* Hide the emoji and span img on mobile screens */
+  }
+
+  #bg {
+    width: 80%; /* Adjust the width for smaller screens */
+    margin-left: 8%; /* Center the image horizontally */
+  }
+
+  .img-side span {
+    bottom: 2%; /* Adjust the position for smaller screens */
+  }
+
+  .img-side span img {
+    width: 100px; /* Adjust the image size for smaller screens */
+  }
 }
