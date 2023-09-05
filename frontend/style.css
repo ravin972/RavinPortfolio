@@ -17,16 +17,16 @@ body {
 }
 /* Styling the scrollbar for the entire site */
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #64ffda;
+  background-color: #8931fc;
   border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #32e0c4;
+  background-color: #ffffff;
 }
 
 body::-webkit-scrollbar-track {
@@ -128,7 +128,7 @@ iframe {
 }
 
 #center-nav a:hover {
-  color: rgb(118, 44, 187); /* Set the desired hover color */
+  color: #8931fc; /* Set the desired hover color */
 }
 
 #text {
@@ -153,7 +153,7 @@ iframe {
   font-weight: 500;
 }
 #text > h5 {
-  color: rgb(153, 0, 255);
+  color: #8931fc;
   transform: rotate(-35deg);
   position: absolute;
   left: 2%;
@@ -177,7 +177,7 @@ span a {
 
 /* Style for the anchor on hover */
 span a:hover {
-  color: rgb(118, 44, 187); /* Set the desired hover color */
+  color: #8931fc; /* Set the desired hover color */
 }
 
 /* Style for the font awesome icons */
@@ -243,7 +243,7 @@ span a i {
 
 /* ------------------------------------ */
 
-/* PAGE @2 */
+/* PAGE @1 */
 #page1 {
   position: relative;
   height: 100vh;
@@ -283,7 +283,7 @@ span a i {
 }
 
 #bg:hover {
-  transform: scale(1.08); /* Scale the image to 110% on hover */
+  transform: scale(1.06); /* Scale the image to 110% on hover */
 }
 
 /* Style for the optional third image inside the span */
@@ -306,7 +306,7 @@ span a i {
   padding-right: 4rem;
 }
 .text-side h3 {
-  color: #147efb;
+  color: #8931fc;
   font-size: 1rem;
   font-weight: 700;
   margin-top: 2.5rem;
@@ -326,6 +326,124 @@ span a i {
   font-size: 1.08rem;
   font-weight: 500;
   line-height: 1.5;
+}
+/* Projects */
+.page2{
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  background-color: #cfbfd8; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.page2>h1{
+  font-weight:900;
+  text-transform: uppercase;
+}
+
+/*Footer  */
+section{
+  padding: 4rem 0;
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 107rem;
+  padding: 0 4rem;
+}
+.contact__content {
+  display: flex;
+  flex-direction: column;
+}
+.contact__title p {
+  color: #8931fc;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.contact__title h3 {
+  color: #2d2e32;
+  font-size: 2rem;
+}
+.contact__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  margin-top: 6rem;
+}
+.contact__icon-box {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+}
+.contact__icon-box span {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1.6rem;
+}
+.contact__icon-box span i {
+  color: #8931fc;
+  font-size: 1.8rem;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact__info h3 {
+  color: #2d2e32;
+  font-size: 1.4rem;
+}
+.contact__info a,
+.contact__info p {
+  color: #767676;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.contact__info a:hover{
+  color:#a263f3;
+}
+.contact__info p:hover{
+  color: #a263f3;
+}
+
+footer {
+  background-color: #2d2e32;
+  padding: 3.5rem 0;
+  width: 100%;
+}
+.f_container {
+  margin: 0 auto;
+  max-width: 107rem;
+  padding: 0 4rem;
+}
+.foot {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+.foot h3 {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.footer__socials {
+  display: flex;
+  gap: 2.2rem;
+}
+.footer__socials i {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.footer__socials i:hover{
+  transform: scale(1.2);
+  color: #a263f3;
 }
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
